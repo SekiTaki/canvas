@@ -2,8 +2,19 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    background-color: #282728;
 }
 
 #canvas {
     
+}
+
+.color_canvas{
+    background-color: white;
+}
+
+.button{
+    color: white;
+    background-color:slateblue;
+    padding: 10px 20px 10px 20px;
 }
