@@ -54,3 +54,12 @@ window.addEventListener('load',() =>{
     canvas.addEventListener("mousemove", draw);
 
 });
+const canvas = document.querySelector("#canvas");
+const ctx = canvas.getContext("2d");
+
+let start_background_color ="white";
+function clear_canvas(){
+    ctx.fillStyle = start_background_color;
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+}
