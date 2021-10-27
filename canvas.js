@@ -3,7 +3,7 @@ window.addEventListener('load',() =>{
     const ctx = canvas.getContext("2d");
 
     //Resizing
-    canvas.height = window.innerHeight;
+    canvas.height = 500;
     canvas.width = window.innerWidth;
 
     /*--
