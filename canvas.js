@@ -55,7 +55,8 @@ window.addEventListener('load',() =>{
 
 });
 const canvas = document.querySelector("#canvas");
-    const ctx = canvas.getContext("2d");
+const ctx = canvas.getContext("2d");
+
 let start_background_color ="white";
 function clear_canvas(){
     ctx.fillStyle = start_background_color;
