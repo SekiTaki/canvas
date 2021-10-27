@@ -38,7 +38,7 @@ window.addEventListener('load',() =>{
 
     function draw(e){
         if(!painting)return;
-        ctx.lineWidth = 10;
+        ctx.lineWidth = 3;
         ctx.lineCap = "round";
         //ctx.strokeStyle = "red";
 
@@ -47,8 +47,16 @@ window.addEventListener('load',() =>{
         ctx.beginPath();
         ctx.moveTo(e.clientX, e.clientY);
     }
+
     //Eventlisteners
     canvas.addEventListener("mousedown" , startPosition);
     canvas.addEventListener("mouseup", finishedPosition);
     canvas.addEventListener("mousemove", draw);
+
 });
+let start_background_color ="white";
+function clear_canvas(){
+    ctx.fillStyle = start_background_color;
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+}
