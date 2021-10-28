@@ -10,7 +10,8 @@
 	</head>
 	<body>
 		<canvas id="canvas" class="color_canvas"></canvas>
-		<button type="button" onClick="clear_canvas(this)" class="button">clear</button>
+		<button type="button" onclick="undo_canvas()" class="button">Undo</button>
+		<button type="button" onclick="clear_canvas()" class="button">clear</button>
 		<div onclick="change_color(this)" class="color-field" style="background: blue;"></div>
 		<div onclick="change_color(this)" class="color-field" style="background: green;"></div>
 		<div onclick="change_color(this)" class="color-field" style="background: yellow;"></div>

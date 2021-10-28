@@ -30,6 +30,8 @@ const ctx = canvas.getContext("2d");
     let painting = false;
     let start_background_color ="white";
     ctx.strokeStyle = "black";
+    let restore_array =[];
+    let index = -1;
 
     function startPosition(e){
         painting = true;
@@ -39,6 +41,10 @@ const ctx = canvas.getContext("2d");
         painting = false;
         ctx.beginPath();
         Event.preventDefault();
+        if(Event.type !='mouseout'){
+            restore_array.push(ctx.getImageData(0, 0, canvas.width, canvas.height));
+            index += 1;
+        }
     }
 
     function draw(e){
@@ -57,10 +63,23 @@ const ctx = canvas.getContext("2d");
         ctx.fillStyle = start_background_color;
         ctx.clearRect(0, 0, canvas.width, canvas.height);
         ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+        restore_array = [];
+        index = -1;
     }
     
     function change_color(element){
         ctx.strokeStyle = element.style.background;
+    }
+
+    function undo_canvas(){
+        if (index <= 0){
+            clear_canvas();
+        } else{
+            index -= 1;
+            restore_array.pop();
+            ctx.putImageData(restore_array[index],0,0);
+        }
     }
 
     //Eventlisteners
