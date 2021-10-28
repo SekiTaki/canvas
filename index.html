@@ -15,7 +15,7 @@
 		<div onclick="change_color(this)" class="color-field" style="background: green;"></div>
 		<div onclick="change_color(this)" class="color-field" style="background: yellow;"></div>
 		<div onclick="change_color(this)" class="color-field" style="background: red;"></div>
-		<p id="one"></p>
+		<input oninput="ctx.strokeStyle = this.value" type="color" class="color-picker">
 	</body>
 	<script src="canvas.js"></script>
 </html>
