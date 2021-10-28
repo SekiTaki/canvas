@@ -37,11 +37,11 @@ const ctx = canvas.getContext("2d");
         painting = true;
         draw(e);
     }
-    function finishedPosition(){
+    function finishedPosition(e){
         painting = false;
         ctx.beginPath();
-        Event.preventDefault();
-        if(Event.type !='mouseout'){
+        e.preventDefault();
+        if(e.type !='mouseout'){
             restore_array.push(ctx.getImageData(0, 0, canvas.width, canvas.height));
             index += 1;
         }
@@ -57,7 +57,7 @@ const ctx = canvas.getContext("2d");
         ctx.stroke();
         ctx.beginPath();
         ctx.moveTo(e.clientX - canvas.offsetLeft, e.clientY - canvas.offsetTop);
-        Event.preventDefault();
+        e.preventDefault();
     }
     function clear_canvas(){
         ctx.fillStyle = start_background_color;
