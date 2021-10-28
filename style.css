@@ -5,10 +5,6 @@
     background-color: #282728;
 }
 
-#canvas {
-    
-}
-
 .color_canvas{
     background-color: white;
 }
@@ -17,4 +13,30 @@
     color: white;
     background-color:slateblue;
     padding: 10px 20px 10px 20px;
+}
+
+.color-field{
+    height: 40px;
+    width: 40px;
+    min-height: 40px;
+    min-width: 40px;
+    cursor: pointer;
+    display: inline-block;
+    box-sizing: border-box;
+    border-radius: 50%;
+    border: 2px solid white;
+    align-self: center;
+    margin: 0 15px;
+}
+
+.button{
+    align-self: center;
+    width: 100px;
+    height: 40px;
+    border: 2px solid white;
+    cursor: pointer;
+    color: white;
+    background-color: #222;
+    font-weight: bold;
+    margin: 0 15px;
 }

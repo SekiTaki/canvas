@@ -5,11 +5,17 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta http-equiv="X-UA-Compatible" content="ie=edge"/>
 		<link rel="stylesheet" href="./style.css"/>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 		<title>Canvas</title>
 	</head>
 	<body>
 		<canvas id="canvas" class="color_canvas"></canvas>
-		<button type="button" onClick="clear_canvas()" class="button">clear</button>
+		<button type="button" onClick="clear_canvas(this)" class="button">clear</button>
+		<div onclick="change_color(this)" class="color-field" style="background: blue;"></div>
+		<div onclick="change_color(this)" class="color-field" style="background: green;"></div>
+		<div onclick="change_color(this)" class="color-field" style="background: yellow;"></div>
+		<div onclick="change_color(this)" class="color-field" style="background: red;"></div>
+		<p id="one"></p>
 	</body>
 	<script src="canvas.js"></script>
 </html>
