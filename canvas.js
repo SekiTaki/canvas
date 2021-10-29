@@ -89,6 +89,11 @@ const ctx = canvas.getContext("2d");
     function pen(){
         ctx.globalCompositeOperation="source-over";
     }
+    function download() {
+        var dt = canvas.toDataURL('image/jpeg');
+        this.href = dt;
+    };
+    downloadLnk.addEventListener('click', download, false);
 
     //Eventlisteners
     canvas.addEventListener("mousedown" , startPosition);
