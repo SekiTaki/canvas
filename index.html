@@ -17,6 +17,44 @@
 		<div onclick="change_color(this)" class="color-field" style="background: yellow;"></div>
 		<div onclick="change_color(this)" class="color-field" style="background: red;"></div>
 		<input oninput="ctx.strokeStyle = this.value" type="color" class="color-picker">
+		<div onclick="change_color(this)" class="color-field2">
+				<svg version="1.1" id="Layer_2" onclick="pen()" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1366 768" style="enable-background:new 0 0 1366 768;" xml:space="preserve">
+				<style type="text/css">
+					.st0{
+						fill:none;
+						stroke:#FFFFFF;
+						stroke-width:30;
+						stroke-miterlimit:10;
+					}
+					.st1{
+						fill:none;
+						stroke:#0DFF00;
+						stroke-width:30;
+						stroke-miterlimit:10;
+					}
+				</style>
+					<path class="st0" d="M800.73,423.15"/>
+					<path class="st1" d="M531.08,246.55l74.54-74.54c0,0,23.21-26.02,49.23,0c26.02,26.02,82.28,82.28,82.28,82.28L499.2,492.21h-59.07
+					l-28.36,28.36l28.36-28.36v-71.26l232.07-231.6l13.83,13.83l40.08-40.08c0,0,16.64-9.61,31.41,5.16c0,0,16.88,15,9.38,28.6
+					l-43.6,43.6l13.83,13.83L611.49,379.93l-64.35-65.76L672.2,189.35l-15-15c0,0-23.44-30.47-54.85,0.94
+					c-31.41,31.41,3.28-3.28,3.28-3.28L531.08,246.55z"/>
+				</svg>
+		</div>
+		<div onclick="erase()" class="color-field2">
+				<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1366 768" style="enable-background:new 0 0 1366 768;" xml:space="preserve">
+				<style type="text/css">
+					.st0{
+						fill:none;
+						stroke:#0DFF00;
+						stroke-width:30;
+						stroke-miterlimit:10;
+					}
+				</style>
+					<path class="st0" d="M659.89,278.18l128.62,128.62l63.87-63.87c0,0,19.86-21.18,0-41.05l-89.22-89.22c0,0-19.59-17.83-37.42,0
+					L511.02,427.38c0,0-12.98,20.88,0,33.86l94.19,94.19c0,0,19.66,13.51,33.17,0l150.13-148.62l-103.9,102.86c0,0-21.8,19.16-40.97,0
+					l-88.52-88.52c0,0-19.83-18.04,0.19-38.05L659.89,278.18z"/>
+				</svg>
+		</div>
 	</body>
 	<script src="canvas.js"></script>
 </html>

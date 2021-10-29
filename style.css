@@ -29,6 +29,19 @@
     margin: 0 15px;
 }
 
+.color-field2{
+    height: auto;
+    width: 80px;
+    cursor: pointer;
+    display: inline-block;
+    margin: 0 15px;
+}
+
+.color-field2:hover{
+    fill:crimson;
+}
+
+
 .button{
     align-self: center;
     width: 100px;

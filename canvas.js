@@ -82,9 +82,19 @@ const ctx = canvas.getContext("2d");
         }
     }
 
+    function erase(){
+        ctx.globalCompositeOperation = 'destination-out';
+    }
+
+    function pen(){
+        ctx.globalCompositeOperation="source-over";
+    }
+
     //Eventlisteners
     canvas.addEventListener("mousedown" , startPosition);
     canvas.addEventListener("touchstart" , startPosition);
     canvas.addEventListener("mouseup", finishedPosition);
     canvas.addEventListener("touchmove", finishedPosition);
     canvas.addEventListener("mousemove", draw);
+
+    $("#eraser").click(function(){ mode="eraser"; });
