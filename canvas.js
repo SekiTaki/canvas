@@ -1,12 +1,12 @@
 window.addEventListener('load',() =>{
     
 });
-const canvas = document.querySelector("#canvas");
+//const canvas = document.querySelector("#canvas");
+var canvas = document.getElementById('canvas');
 const ctx = canvas.getContext("2d");
-
-    //Resizing
-    canvas.height = 550;
-    canvas.width = window.innerWidth;
+//Resizing
+canvas.height = 550;
+canvas.width = window.innerWidth;
 
     /*--
     ctx.strokeStyle = "red";
@@ -26,12 +26,13 @@ const ctx = canvas.getContext("2d");
     ctx.stroke();
     --*/
 
-    //variables
-    let painting = false;
-    let start_background_color ="white";
-    ctx.strokeStyle = "black";
-    let restore_array =[];
-    let index = -1;
+//variables
+let painting = false;
+let start_background_color ="white";
+ctx.strokeStyle = "black";
+let restore_array =[];
+let index = -1;
+var dl = document.getElementById("downloadLnk")
 
     function startPosition(e){
         painting = true;
@@ -83,17 +84,18 @@ const ctx = canvas.getContext("2d");
     }
 
     function erase(){
-        ctx.globalCompositeOperation = 'destination-out';
+        ctx.globalCompositeOperation = "destination-out";
     }
 
     function pen(){
         ctx.globalCompositeOperation="source-over";
     }
-    function download() {
-        var dt = canvas.toDataURL('image/jpeg');
-        this.href = dt;
-    };
-    downloadLnk.addEventListener('click', download, false);
+
+    function to_image(){
+        dl.download = "image.png";
+        dl.href = canvas.toDataURL("image/png").replace(/^data:image\/[^;]/, 'data:application/octet-stream');
+    }
+    downloadLnk.addEventListener("click", to_image, false);
 
     //Eventlisteners
     canvas.addEventListener("mousedown" , startPosition);
@@ -101,5 +103,3 @@ const ctx = canvas.getContext("2d");
     canvas.addEventListener("mouseup", finishedPosition);
     canvas.addEventListener("touchmove", finishedPosition);
     canvas.addEventListener("mousemove", draw);
-
-    $("#eraser").click(function(){ mode="eraser"; });

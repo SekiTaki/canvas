@@ -6,6 +6,7 @@
 		<meta http-equiv="X-UA-Compatible" content="ie=edge"/>
 		<link rel="stylesheet" href="./style.css"/>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<script src="http://hongru.github.io/proj/canvas2image/canvas2image.js"></script>
 		<title>Canvas</title>
 	</head>
 	<body>
@@ -55,7 +56,9 @@
 					l-88.52-88.52c0,0-19.83-18.04,0.19-38.05L659.89,278.18z"/>
 				</svg>
 		</div>
-		<button class="button" id="downloadLnk" download="YourFileName.jpg">Save as</button>
+		<a type="button" class="button" id="downloadLnk" download="YourFileName.jpg" onclick="to_image()">Save as png</a>
+
+        <image id="theimage"></image>
 	</body>
 	<script src="canvas.js"></script>
 </html>
